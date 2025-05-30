@@ -369,11 +369,11 @@
                     <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="SystemException IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_6" />
                   </Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Wirte status and Remark inthe  log report" DisplayName="Report" sap:VirtualizedContainerService.HintSize="763.2,5645.6" sap2010:WorkflowViewState.IdRef="State_6">
+                    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Wirte status and Remark inthe  log report" DisplayName="Report" sap:VirtualizedContainerService.HintSize="763.2,5786.4" sap2010:WorkflowViewState.IdRef="State_6">
                       <State.Entry>
-                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="718.4,5225.6" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="718.4,5326.4" sap2010:WorkflowViewState.IdRef="TryCatch_11">
                           <TryCatch.Try>
-                            <Sequence DisplayName="Write Log Report" sap:VirtualizedContainerService.HintSize="681.6,4971.2" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                            <Sequence DisplayName="Write Log Report" sap:VirtualizedContainerService.HintSize="681.6,5032" sap2010:WorkflowViewState.IdRef="Sequence_35">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -477,7 +477,7 @@
                                   </Sequence>
                                 </If.Then>
                               </If>
-                              <If Condition="[RowIndex&gt;-1]" sap:VirtualizedContainerService.HintSize="633.6,3355.2" sap2010:WorkflowViewState.IdRef="If_13">
+                              <If Condition="[RowIndex&gt;-1]" sap:VirtualizedContainerService.HintSize="633.6,3416" sap2010:WorkflowViewState.IdRef="If_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -485,7 +485,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="598.4,3165.6" sap2010:WorkflowViewState.IdRef="TryCatch_12">
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="598.4,3226.4" sap2010:WorkflowViewState.IdRef="TryCatch_12">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -493,7 +493,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <TryCatch.Try>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="561.6,2934.4" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="561.6,2995.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:String" Name="StatusOfRecord" />
                                           <Variable x:TypeArguments="x:String" Name="RemarksOfRecord" />
@@ -567,7 +567,7 @@
                                             </ui:MultipleAssign>
                                           </If.Then>
                                         </If>
-                                        <If Condition="[String.IsNullOrEmpty(StatusOfRecord)]" DisplayName="If - StatusOfRecord Is empty" sap:VirtualizedContainerService.HintSize="513.6,494.4" sap2010:WorkflowViewState.IdRef="If_16">
+                                        <If Condition="[String.IsNullOrEmpty(StatusOfRecord)]" DisplayName="If - StatusOfRecord Is empty" sap:VirtualizedContainerService.HintSize="513.6,524.8" sap2010:WorkflowViewState.IdRef="If_16">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -575,7 +575,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <If.Then>
-                                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,304.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+                                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,335.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
                                               <ui:MultipleAssign.AssignOperations>
                                                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                                                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
@@ -631,7 +631,15 @@
                                                       <OutArgument x:TypeArguments="x:String">[BusinessStatus]</OutArgument>
                                                     </ui:AssignOperation.To>
                                                     <ui:AssignOperation.Value>
-                                                      <InArgument x:TypeArguments="x:String">[If(LogFileData.Keys.Contains("NameOfBusiness"), LogFileData("NameOfBusiness").ToString, "")]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String">[If(LogFileData.Keys.Contains("BusinessStatus"), LogFileData("BusinessStatus").ToString, "")]</InArgument>
+                                                    </ui:AssignOperation.Value>
+                                                  </ui:AssignOperation>
+                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_33">
+                                                    <ui:AssignOperation.To>
+                                                      <OutArgument x:TypeArguments="x:String">[RemarksOfRecord]</OutArgument>
+                                                    </ui:AssignOperation.To>
+                                                    <ui:AssignOperation.Value>
+                                                      <InArgument x:TypeArguments="x:String">[If(LogFileData.Keys.Contains("Remarks"), LogFileData("Remarks").ToString, "")]</InArgument>
                                                     </ui:AssignOperation.Value>
                                                   </ui:AssignOperation>
                                                 </scg:List>
@@ -669,7 +677,7 @@
                                             <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="[CStr(Config(&quot;ReasonColumnName&quot;))]" DataTable="[ExcelInputData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
                                           </If.Then>
                                         </If>
-                                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="513.6,367.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+                                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="513.6,397.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
                                           <ui:MultipleAssign.AssignOperations>
                                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
@@ -742,6 +750,14 @@
                                                 </ui:AssignOperation.To>
                                                 <ui:AssignOperation.Value>
                                                   <InArgument x:TypeArguments="x:Object">[Address1]</InArgument>
+                                                </ui:AssignOperation.Value>
+                                              </ui:AssignOperation>
+                                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_34">
+                                                <ui:AssignOperation.To>
+                                                  <OutArgument x:TypeArguments="x:Object">[DataRowExcel("REMARKS")]</OutArgument>
+                                                </ui:AssignOperation.To>
+                                                <ui:AssignOperation.Value>
+                                                  <InArgument x:TypeArguments="x:Object">[RemarksOfRecord]</InArgument>
                                                 </ui:AssignOperation.Value>
                                               </ui:AssignOperation>
                                             </scg:List>
